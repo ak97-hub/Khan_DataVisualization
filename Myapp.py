@@ -114,6 +114,8 @@ def st_shap(plot, height=None):
 
 with header:
     st.title("Data Visualization of Gradient Boosting Regressor")
+    st.subheader("By Angelo Khan")
+    st.markdown("***")
     st.subheader("Introduction")
     st.text(
     """
