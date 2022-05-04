@@ -47,7 +47,7 @@ import streamlit.components.v1 as components
 numeric_columns = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 ordinal_columns = [0]
 cat_columns= [10]
-data=pd.read_csv("/Users/angelokhan/Downloads/brazilian-ecommerce-dataset")
+data=pd.read_csv("brazilian-ecommerce-dataset")
 data=data.iloc[0:10000,:]
 target="price"
 
