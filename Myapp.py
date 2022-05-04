@@ -41,19 +41,16 @@ performance1, performance2 = st.columns(2)
 performance3 = st.container()
 performance4 = st.container()
 import streamlit.components.v1 as components
-#mcc_text = st.container()
 
 
 numeric_columns = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 ordinal_columns = [0]
 cat_columns= [10]
-data=pd.read_csv("brazilian-ecommerce-dataset.csv")
-data=data.iloc[0:10000,:]
 target="price"
 
 @st.cache
 def load_data():
-    data=pd.read_csv("brazilian-ecommerce-dataset")
+    data=pd.read_csv("brazilian-ecommerce-dataset.csv")
     data=data.iloc[0:10000,:]
     return data
 
