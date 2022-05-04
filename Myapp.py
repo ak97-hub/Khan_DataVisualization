@@ -51,6 +51,12 @@ data=pd.read_csv("brazilian-ecommerce-dataset")
 data=data.iloc[0:10000,:]
 target="price"
 
+@st.cache
+def load_data():
+    data=pd.read_csv("brazilian-ecommerce-dataset")
+    data=data.iloc[0:10000,:]
+    return data
+
 
 @st.cache
 def encode_data(df, target, encode_selection, cat_cols):
@@ -151,6 +157,7 @@ with dataset:
     ''')
     st.markdown("***")
     st.header("Encoding Categorical Columns")
+    data= load_data()
     with encodings:
         with selection:
             encoding_type = ["JamesStein", "Target encoder"]
