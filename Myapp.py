@@ -151,7 +151,6 @@ with dataset:
     ''')
     st.markdown("***")
     st.header("Encoding Categorical Columns")
-    data= load_data()
     with encodings:
         with selection:
             encoding_type = ["JamesStein", "Target encoder"]
