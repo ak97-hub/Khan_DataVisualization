@@ -47,12 +47,9 @@ numeric_columns = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 ordinal_columns = [0]
 cat_columns= [10]
 target="price"
+data=pd.read_csv("brazilian-ecommerce-dataset.csv")
+data=data.iloc[0:10000,:]
 
-@st.cache
-def load_data():
-    data=pd.read_csv("brazilian-ecommerce-dataset.csv")
-    data=data.iloc[0:10000,:]
-    return data
 
 
 @st.cache
